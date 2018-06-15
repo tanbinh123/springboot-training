@@ -3,6 +3,9 @@ package com.gsonkeno.springbootdemo.bean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+/**
+ * 获取配置文件属性
+ */
 @ConfigurationProperties(prefix = "girl")
 @Component
 public class GirlBean {
