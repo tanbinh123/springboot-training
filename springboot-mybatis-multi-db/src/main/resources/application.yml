@@ -1,0 +1,13 @@
+first:
+      datasource:
+        jdbcUrl: jdbc:mysql://localhost:3306/springbootdb?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: 123456
+        driverClassName: com.mysql.jdbc.Driver
+
+second:
+      datasource:
+        jdbcUrl: jdbc:mysql://localhost:3306/springbootdb2?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: 123456
+        driverClassName: com.mysql.jdbc.Driver
