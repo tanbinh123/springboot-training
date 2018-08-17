@@ -1,0 +1,3 @@
+## StringRedisTemplate
+示例代码中用的Redis客户端实例类型是StringRedisTemplate,它使用的的序列化
+类是StringRedisSerializer，不同于RedisTemplate使用的是 JdkSerializationRedisSerializer
