@@ -1,3 +1,7 @@
 ## StringRedisTemplate
 示例代码中用的Redis客户端实例类型是StringRedisTemplate,它使用的的序列化
 类是StringRedisSerializer，不同于RedisTemplate使用的是 JdkSerializationRedisSerializer
+
+
+## org.springframework.data.redis.core.RedisTemplate
+正如上面所说，示例代码中也可直接注入该实例，使用的序列化类是 JdkSerializationRedisSerializer

@@ -20,6 +20,6 @@ public class SpringbootRedisApplication implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        service.set();
+        service.set2();
     }
 }
