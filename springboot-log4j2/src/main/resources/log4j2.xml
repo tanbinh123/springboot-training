@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="off" monitorInterval="1800">
+
+    <properties>
+        <property name="LOG_HOME">/data/logs</property>
+        <property name="APP_LOG_NAME">debug-info</property>
+        <property name="APP_WARN_LOG_NAME">warn</property>
+        <property name="APP_ERROR_LOG_NAME">error</property>
+    </properties>
+
+    <Appenders>
+        <Console name="CONSOLE"   target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+		
+		<!-- 基本日志 -->
+        <RollingRandomAccessFile name="APP_ROLLING"
+            fileName="${LOG_HOME}/${APP_LOG_NAME}.log" filePattern="${LOG_HOME}/${date:yyyy-MM}/${APP_LOG_NAME}-%d{yyyy-MM-dd}.log">
+            <PatternLayout
+                 pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%class{36}:%L %M] - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+
+            <Filters>
+                <!-- 输出日志级别为 debug,info 的日志 -->
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingRandomAccessFile>
+
+        <!-- warn日志 -->
+        <RollingRandomAccessFile name="APP_WARN_ROLLING"
+                                 fileName="${LOG_HOME}/${APP_WARN_LOG_NAME}.log" filePattern="${LOG_HOME}/${date:yyyy-MM}/${APP_WARN_LOG_NAME}-%d{yyyy-MM-dd}.log">
+            <PatternLayout
+                    pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%class{36}:%L %M] - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+
+            <Filters>
+                <!-- 输出日志级别为 warn 的日志 -->
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingRandomAccessFile>
+
+
+        <!-- 异常日志 -->
+        <RollingRandomAccessFile name="APP_ERROR_ROLLING"
+                                 fileName="${LOG_HOME}/${APP_ERROR_LOG_NAME}.log" filePattern="${LOG_HOME}/${date:yyyy-MM}/${APP_ERROR_LOG_NAME}-%d{yyyy-MM-dd}.log">
+            <PatternLayout
+                    pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%class{36}:%L %M] - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+            <Filters>
+                <!-- 输出日志级别为 error 的日志 -->
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingRandomAccessFile>
+    </Appenders>
+    
+    <Loggers>
+        <logger name="org.springframework" level="info">
+        </logger>
+        <logger name="org.apache.http" level="warn">  
+        </logger>
+
+        <root level="debug">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="APP_ROLLING"  />
+            <appender-ref ref="APP_WARN_ROLLING" />
+            <appender-ref ref="APP_ERROR_ROLLING" />
+        </root>
+    </Loggers>
+</Configuration>
