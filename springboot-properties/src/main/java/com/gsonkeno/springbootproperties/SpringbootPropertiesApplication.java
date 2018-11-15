@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringbootPropertiesApplication implements CommandLineRunner {
 
-    @Autowired
-    private HomeProperties homeProperties;
+//    @Autowired
+//    private HomeProperties homeProperties;
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootPropertiesApplication.class, args);
@@ -21,6 +21,6 @@ public class SpringbootPropertiesApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(homeProperties);
+       // System.out.println(homeProperties);
     }
 }

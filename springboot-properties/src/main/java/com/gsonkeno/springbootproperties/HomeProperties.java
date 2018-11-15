@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * 家乡属性
  */
-@Component
+//@Component
 @ConfigurationProperties(prefix = "home")
 public class HomeProperties {
 
