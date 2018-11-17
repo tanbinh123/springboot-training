@@ -9,4 +9,5 @@
 - 8.执行DisposableBean接口的destroy方法
 
 参考图片
+
 ![springboot-bean](https://github.com/gsonkeno/springboot-training/blob/master/springboot-bean/doc/springboot-bean.jpg?raw=true)
