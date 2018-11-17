@@ -1,4 +1,4 @@
-## springboot中bean的声明周期
+## springboot中bean的生命周期
 - 1.执行无参构造函数
 - 2.执行set方法注入属性
 - 3.被实现BeanPostProcessor接口的后置处理器的postProcessBeforeInitialization方法处理
