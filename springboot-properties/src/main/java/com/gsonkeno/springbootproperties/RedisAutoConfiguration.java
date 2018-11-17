@@ -16,9 +16,7 @@
 
 package com.gsonkeno.springbootproperties;
 
-import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
@@ -26,9 +24,5 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties(RedisProperties.class)
 public class RedisAutoConfiguration {
 
-    @Bean
-    public RedisFactory redisFactory(){
-        return new RedisFactory();
-    }
 
 }
