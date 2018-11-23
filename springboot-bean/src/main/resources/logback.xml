@@ -24,7 +24,7 @@
     <logger name="java.sql.PreparedStatement" level="DEBUG"/>
     <logger name="org.springframework.jmx.export.annotation" level="warn"/>
     <!-- 日志输出级别 -->
-    <root level="INFO">
+    <root level="debug">
         <appender-ref ref="STDOUT" />
     </root>
 

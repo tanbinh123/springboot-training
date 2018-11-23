@@ -19,6 +19,8 @@ public class User implements InitializingBean, DisposableBean {
 
     private int age;
 
+    private Action action;
+
     public User(String name, int age) {
         this.name = name;
         this.age = age;
@@ -65,5 +67,16 @@ public class User implements InitializingBean, DisposableBean {
     @Override
     public void destroy() throws Exception {
         log.info("执行 DisposableBean 的 destroy 方法");
+    }
+
+    @Override
+    public String toString() {
+        return "我是user";
+    }
+
+    class Action{
+        private String behaviorName;
+
+        private String level;
     }
 }
