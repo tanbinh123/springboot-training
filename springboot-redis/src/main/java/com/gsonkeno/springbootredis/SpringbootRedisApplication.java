@@ -8,7 +8,9 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -16,19 +18,31 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @SpringBootApplication
+@EnableConfigurationProperties({Student.class})
 //@EnableCaching
 public class SpringbootRedisApplication implements ApplicationRunner {
 
-//    @Autowired
-//    private UserService service;
+    @Autowired
+    private UserService service;
+
+    @Autowired
+    private Student student;
+
+    @Autowired
+    private Father father;
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootRedisApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(SpringbootRedisApplication.class, args);
+        System.out.println(context);
+
     }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-//        service.set2();
+        service.set2();
+        System.out.println(student.getName());
+        System.out.println(father.getAge());
+
     }
 
     /**
