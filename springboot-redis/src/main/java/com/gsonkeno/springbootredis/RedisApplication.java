@@ -11,7 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 @EnableConfigurationProperties({Student.class})
 //@EnableCaching
-public class SpringbootRedisApplication implements ApplicationRunner {
+public class RedisApplication implements ApplicationRunner {
 
     @Autowired
     private UserService service;
@@ -23,7 +23,7 @@ public class SpringbootRedisApplication implements ApplicationRunner {
     private Father father;
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(SpringbootRedisApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(RedisApplication.class, args);
         System.out.println(context);
 
     }
@@ -65,5 +65,9 @@ public class SpringbootRedisApplication implements ApplicationRunner {
 //        template.opsForValue().set("name","lhao");
 //        return template;
 //    }
+
+    private class InnerApplication{
+        private String inner;
+    }
 
 }
