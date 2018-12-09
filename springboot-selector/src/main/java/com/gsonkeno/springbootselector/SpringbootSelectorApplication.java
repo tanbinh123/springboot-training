@@ -8,7 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableSpringStudy
 public class SpringbootSelectorApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         SpringApplication.run(SpringbootSelectorApplication.class, args);
+
+        Thread.sleep(1000*60*60);
     }
 }
