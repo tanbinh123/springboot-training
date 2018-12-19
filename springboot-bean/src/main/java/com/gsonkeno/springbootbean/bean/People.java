@@ -5,12 +5,6 @@ import java.util.List;
 public class People {
     private String name;
 
-    private Integer age;
-
-    private List<String> address;
-
-    private Phone phone;
-
     public String getName() {
         return name;
     }
@@ -19,38 +13,37 @@ public class People {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
-    }
+//    private Integer age;
+//
+//    private List<String> address;
+//
+//    private Phone phone;
+//
+//
+//
+//    public Integer getAge() {
+//        return age;
+//    }
+//
+//    public void setAge(Integer age) {
+//        this.age = age;
+//    }
+//
+//    public List<String> getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(List<String> address) {
+//        this.address = address;
+//    }
+//
+//    public Phone getPhone() {
+//        return phone;
+//    }
+//
+//    public void setPhone(Phone phone) {
+//        this.phone = phone;
+//    }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public List<String> getAddress() {
-        return address;
-    }
-
-    public void setAddress(List<String> address) {
-        this.address = address;
-    }
-
-    public Phone getPhone() {
-        return phone;
-    }
-
-    public void setPhone(Phone phone) {
-        this.phone = phone;
-    }
-
-    @Override
-    public String toString() {
-        return "People{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", address=" + address +
-                ", phone=" + phone +
-                '}';
-    }
 
 }
