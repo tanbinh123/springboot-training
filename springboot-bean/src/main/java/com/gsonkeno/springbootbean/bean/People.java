@@ -13,37 +13,36 @@ public class People {
         this.name = name;
     }
 
-//    private Integer age;
-//
-//    private List<String> address;
-//
-//    private Phone phone;
-//
-//
-//
-//    public Integer getAge() {
-//        return age;
-//    }
-//
-//    public void setAge(Integer age) {
-//        this.age = age;
-//    }
-//
-//    public List<String> getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(List<String> address) {
-//        this.address = address;
-//    }
-//
-//    public Phone getPhone() {
-//        return phone;
-//    }
-//
-//    public void setPhone(Phone phone) {
-//        this.phone = phone;
-//    }
+
+
+    private Phone phone;
+
+    public Phone getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Phone phone) {
+        this.phone = phone;
+    }
+
+    private Integer age;
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public List<String> getAddress() {
+        return address;
+    }
+    private List<String> address;
+    public void setAddress(List<String> address) {
+        this.address = address;
+    }
+
+
 
 
 }

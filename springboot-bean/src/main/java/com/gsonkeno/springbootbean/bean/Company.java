@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties
 @Component
 public class Company {
 
@@ -40,5 +39,14 @@ public class Company {
 
     public void setCto(String cto) {
         this.cto = cto;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "ceo='" + ceo + '\'' +
+                ", coo='" + coo + '\'' +
+                ", cto='" + cto + '\'' +
+                '}';
     }
 }
