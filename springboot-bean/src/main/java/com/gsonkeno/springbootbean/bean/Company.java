@@ -17,6 +17,8 @@ public class Company {
     @Value("${company.cto}")
     private String cto;
 
+    private String cfo;
+
     public String getCeo() {
         return ceo;
     }
