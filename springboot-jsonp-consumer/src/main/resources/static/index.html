@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonp服务消费方</title>
+</head>
+<body>
+
+</body>
+
+
+<head>
+    <title>跨域测试</title>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#btn").click(function () {
+                $.ajax({
+                    url: 'http://localhost:8080/test',
+                    type: 'GET',
+                    success: function (data) {
+                        $(text).val(data);
+                    }
+                });
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="跨域获取数据" />
+<textarea id="text" style="width: 400px; height: 100px;"></textarea>
+</body>
+</html>
