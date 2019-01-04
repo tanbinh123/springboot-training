@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery jsonp 跨域获取数据</title>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script>
+
+        function showData(data) {
+            console.info("调用showData");
+
+            var result = JSON.stringify(data);
+            $("#text").val(result);
+        }
+
+        $(document).ready(function () {
+
+            $("#btn").click(function () {
+
+                $.ajax({
+                    url: "http://localhost:8080/test",
+                    type: "GET",
+                    dataType: "jsonp", //指定服务器返回的数据类型
+                    jsonpCallback: "showData",  //指定回调函数名称
+                    success: function (data) {
+                        console.info("调用success");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="jquery jsonp 跨域回调自定义函数+执行success函数"/>
+<textarea id="text" style="width: 400px; height: 100px;"></textarea>
+</body>
+</html>

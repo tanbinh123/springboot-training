@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨域测试jsonp回调</title>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script>
+        //回调函数
+        function showData(result) {
+            var data = JSON.stringify(result); //json对象转成字符串
+            $("#text").val(data);
+        }
+
+        $(document).ready(function () {
+
+            $("#btn").click(function () {
+                //向头部输入一个脚本，该脚本发起一个跨域请求
+                $("head").append("<script src='http://localhost:8080/test?callback=showData'><\/script>");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="跨域获取数据"/>
+<textarea id="text" style="width: 400px; height: 100px;"></textarea>
+</body>
+</html>

@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jsonp服务消费方</title>
+    <title>jquery jsonp 跨域获取数据</title>
     <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script>
         $(document).ready(function () {
 
             $("#btn").click(function () {
+
                 $.ajax({
-                    url: 'http://localhost:8080/test',
-                    type: 'GET',
+                    url: "http://localhost:8080/test",
+                    type: "GET",
+                    dataType: "jsonp", //指定服务器返回的数据类型
                     success: function (data) {
-                        $(text).val(data);
+                        var result = JSON.stringify(data); //json对象转成字符串
+                        $("#text").val(result);
                     }
                 });
 
@@ -22,7 +25,7 @@
     </script>
 </head>
 <body>
-<input id="btn" type="button" value="跨域获取数据" />
+<input id="btn" type="button" value="jquery jsonp 跨域获取数据"/>
 <textarea id="text" style="width: 400px; height: 100px;"></textarea>
 </body>
 </html>
