@@ -22,6 +22,7 @@
         <module>springboot-eureka-server</module>
         <module>springboot-eureka-service</module>
         <module>springboot-eureka-client</module>
+        <module>springboot-redis</module>
     </modules>
 
     <parent>
