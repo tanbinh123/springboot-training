@@ -19,10 +19,21 @@
     </properties>
 
     <modules>
+        <module>springboot-apollo</module>
+        <module>springboot-bean</module>
+        <module>springboot-demo</module>
         <module>springboot-eureka-server</module>
         <module>springboot-eureka-service</module>
         <module>springboot-eureka-client</module>
+        <module>springboot-jsonp-consumer</module>
+        <module>springboot-jsonp-provider</module>
+        <module>springboot-log4j2</module>
+        <module>springboot-mybatis</module>
+        <module>springboot-mybatis-multi-db</module>
+        <module>springboot-properties</module>
         <module>springboot-redis</module>
+        <module>springboot-selector</module>
+        <module>springboot-web</module>
     </modules>
 
     <parent>
