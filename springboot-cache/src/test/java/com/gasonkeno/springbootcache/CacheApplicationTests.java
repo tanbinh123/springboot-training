@@ -1,5 +1,6 @@
-package com.gsonkeno.springbooteurekaclient;
+package com.gasonkeno.springbootcache;
 
+import com.gasonkeno.springbootcache.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,15 +9,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DemoApplicationTests {
+public class CacheApplicationTests {
 
     @Autowired
-    private CallHelloService1 callHelloService1;
+    private UserService userService;
 
     @Test
-    public void contextLoads() {
-        String hehe = callHelloService1.hello("hehe");
-        System.out.println(hehe);
+    public void test() {
+        userService.getUserInfo("gaosong");
     }
 
 }
