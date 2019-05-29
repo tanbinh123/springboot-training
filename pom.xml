@@ -21,6 +21,8 @@
     <modules>
         <module>springboot-apollo</module>
         <module>springboot-bean</module>
+        <module>springboot-cache</module>
+        <module>springboot-case-starter</module>
         <module>springboot-demo</module>
         <module>springboot-eureka-server</module>
         <module>springboot-eureka-service</module>
@@ -33,6 +35,7 @@
         <module>springboot-properties</module>
         <module>springboot-redis</module>
         <module>springboot-selector</module>
+        <module>springboot-starter-use</module>
         <module>springboot-web</module>
     </modules>
 
