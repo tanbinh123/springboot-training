@@ -35,6 +35,7 @@
         <module>springboot-properties</module>
         <module>springboot-redis</module>
         <module>springboot-selector</module>
+        <module>springboot-session</module>
         <module>springboot-starter-use</module>
         <module>springboot-web</module>
     </modules>
