@@ -9,7 +9,13 @@
 
             $("#btn").click(function () {
                 $.ajax({
+/*
                     url: 'http://localhost:8080/test',
+*/
+/*
+                    url: 'https://test.vvic.com/apic/loginUserInfo?user_key=&city=gz&cross=1&xy=2',
+*/
+                    url: 'http://dev.vvic.com/apic/loginUserInfo?user_key=&city=gz&cross=1&xy=1',
                     type: 'GET',
                     success: function (data) {
                         $(text).val(data);
