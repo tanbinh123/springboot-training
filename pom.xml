@@ -19,6 +19,7 @@
     </properties>
 
     <modules>
+        <module>springboot-actuator</module>
         <module>springboot-apollo</module>
         <module>springboot-bean</module>
         <module>springboot-cache</module>
