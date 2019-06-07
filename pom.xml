@@ -38,6 +38,7 @@
         <module>springboot-session</module>
         <module>springboot-starter-use</module>
         <module>springboot-web</module>
+        <module>springcloud-stream-producer</module>
     </modules>
 
     <parent>
